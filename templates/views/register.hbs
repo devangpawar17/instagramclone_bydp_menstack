@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="maindiv">
+        <form action="/register" method="POST">
+    <div class="main">
+        <div class="insta-logo">
+            <img src="img/instagram_logo.png" alt="">
+        </div>
+        
+        <p class="title">Sign up to see photos and videos from your friends.</p>
+        <input type="number" name="mnum" placeholder="mobile number" required>
+        <input type="text" name="username" placeholder="username" required>
+        <input type="text" name="bio" placeholder="bio">
+        <input type="text" name="password" placeholder="password" required>
+        <button type="submit">sign up</button>
+        <p>Have an account? <a class="login_btn" href="/login"> log in</a></p>
+    </div>
+</form>
+</div>
+</body>
+</html>

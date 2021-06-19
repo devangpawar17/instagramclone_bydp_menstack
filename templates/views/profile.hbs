@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <script
+      src="https://kit.fontawesome.com/d5f36c4abf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+   {{> navbar }}
+
+
+    
+    <div class="profiletab">
+      <div class="mainprofile">
+        <div class="prof">
+          <img src="img/face1.jpg" alt="" class="profilepic" />
+        </div>
+        <div class="right-profile">
+          <p class="profile_name">{{username}}</p>
+          <!-- <button type="submit">Follow</button> -->
+          <a href="/addposts"><button type="submit">Add Posts</button></a>
+         <div class="followers-tab">
+            <p class="followers">2k followers</p>
+            <p class="following">2k following</p>
+          </div>
+          <p class="bio">{{bio}}</p>
+        </div>
+      </div>
+    </div>
+    <hr id="hr_mid">
+
+
+    <p id="posts_name">POSTS</p>
+    <div class="posts">
+
+       {{#each postsdata}}
+      <img class="item" src="posts_img/{{this.filename}}" alt="img_posts">
+      {{/each}}
+
+
+   </div>
+
+
+  </body>
+</html>

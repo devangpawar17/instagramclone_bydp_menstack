@@ -1,0 +1,30 @@
+.comments_main{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.comment_tab{
+    margin-top: 100px;
+  
+}
+.single_comment{
+    display: flex;
+}
+.u_name{
+    font-weight: bold;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+.cmnt{
+    padding: 2px;
+    margin: 2px;
+}
+h2{
+    margin: 5px;
+}
+#caption{
+    color: rgb(126, 124, 124);
+    font-size: 22px;
+}

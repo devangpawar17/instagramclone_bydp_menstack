@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram 2.0</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d5f36c4abf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+  </head>
+  <body>
+
+    {{> navbar }}
+
+    <hr />
+
+
+    <main id="main-page">
+      <div class="main-left">
+        <hr>
+        <p style="color: black;">not signed up yet ? <a href="/register" style="color: blue;">sign up</a></p>
+        <div class="status">
+          <p>not functional</p>
+          <div class="icon">
+            <img src="img/face1.jpg" alt="" />
+            <p class="u_name">ok</p>
+          </div>
+          <div class="icon">
+            <img src="img/face1.jpg" alt="" />
+            <p class="u_name">ok</p>
+          </div>
+          <div class="icon">
+            <img src="img/face2.jpeg" alt="" />
+            <p class="u_name">iokt</p>
+          </div>
+          <div class="icon">
+            <img src="img/face3.jpg" alt="" />
+            <p class="u_name">ok</p>
+          </div>
+          <div class="icon">
+            <img src="img/face3.jpg" alt="" />
+            <p class="u_name">noob_op</p>
+          </div>
+          <div class="icon">
+            <img src="img/face3.jpg" alt="" />
+            <p class="u_name">noob_op</p>
+          </div>
+        </div>
+
+        <div class="posts">
+
+          {{#each posts_data}}
+          <div class="card">
+            <div class="post-top">
+              <div class="icon">
+                <img src="img/face3.jpg" alt="" />
+                <p class="u_name">{{this.username}}</p>
+              </div>
+            </div>
+            <hr />
+            <div class="post-img">
+              <img src="posts_img/{{this.filename}}" alt="" />
+            </div>
+            <hr />
+            <div class="post-bottom">
+              <div class="bottom1">
+                <i id="heart" class="fass far fa-heart"></i>
+                <a href="/singlepost?id={{this._id}}"><i class="fass far fa-comment"></i></a>
+                <i id="tele" class="fass fab fa-telegram-plane"></i>
+                <p>{{this.caption}}</p>
+                <p>810 Likes</p>
+            
+
+              </div>
+
+               <form action="/" method="POST">
+              <div class="comment">               
+                <input
+                  class="comment_input"
+                  type="text"
+                  name="comment"
+                  placeholder="add a comment"
+                />
+                <input type="hidden"name="postid" value="{{this._id}}">
+                <button type="submit" id="cmnt_btn"><p id="post">Post</p> </button>       
+              </div>
+                 </form>
+
+            </div>
+          </div>
+            {{/each}}
+
+
+          
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="profile-name">
+          <img src="img/face3.jpg" alt="" />
+          <p>noob_op</p>
+          <p id="follow">Switch</p>
+        </div>
+        <div class="sugg">
+          <p id="sugg-font">Suggestions For You</p>
+          <div class="profile-name">
+            <img src="img/face3.jpg" alt="" />
+            <p>nlol]p</p>
+            <p id="follow">Follow</p>
+          </div>
+          <div class="profile-name">
+            <img src="img/face3.jpg" alt="" />
+            <p>nlol]p</p>
+            <p id="follow">Follow</p>
+          </div>
+          <div class="profile-name">
+            <img src="img/face3.jpg" alt="" />
+            <p>nlol]p</p>
+            <p id="follow">Follow</p>
+          </div>
+          <p style="margin-top: 20px; color: #8e8e8e; font-size: 12px">
+            © 2021 INSTAGRAM FROM DEVANG_PAWAR
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

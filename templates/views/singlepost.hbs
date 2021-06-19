@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram 2.0</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d5f36c4abf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/singlepost.css">
+  <title>Single Post</title>
+</head>
+<body>
+
+  {{>navbar}}
+ 
+  <div class="comments_main">
+    <div class="comment_tab">
+      <p id="caption">{{caption.caption}}</p>
+      <h2>Comments</h5>
+      <hr>
+      {{#each cmntpost}}
+      <div class="single_comment">
+      <p class="u_name">{{this.username}}</p>
+      <p class="cmnt">{{this.comment}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</body>
+</html>
